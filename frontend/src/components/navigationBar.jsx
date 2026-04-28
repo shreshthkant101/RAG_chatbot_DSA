@@ -1,0 +1,2 @@
+// component file for navigation bar. will use react router to traverse through multiple different chats stored in memory.
+// every chat will have an ID assigned to it, that will also act as it's identifier for router.

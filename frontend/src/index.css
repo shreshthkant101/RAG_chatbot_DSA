@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f7;
+  color: #d6dae2;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Google Sans Flex", sans-serif;
+   font-weight: 300;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0px 0rem 0px;
+  gap: 12px;
+   
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 10px;
+  padding-left: 5rem;
+  border-bottom: 1px solid #dde1ec;
+  background-color: #fefefe;
+  padding-top: 10px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 400;
+  
+  color: #00417f;
+  font-family: "Bruno Ace SC", sans-serif;
+}
+
+.model-tag {
+  font-size: 10px;
+  color: #717588ad;
+  font-family: monospace;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+/* CHAT PANEL */
+.chat-panel {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding:2rem 12rem;
+   
+  font-family: "Google Sans Flex", sans-serif;
+    
+}
+
+ 
+.chat-panel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-panel::-webkit-scrollbar-thumb {
+  background: #0c0c0c;
+  border-radius: 2px;
+}
+
+.empty-state {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4c5fac;
+  font-size: 14px;
+  user-select: none;
+
+}
+
+/* BUBBLE ROWS */
+.bubble-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 80%;
+  
+}
+
+.bubble-row.user {
+  align-self: flex-end;
+  align-items: flex-end;
+  
+}
+
+.bubble-row.ai {
+  align-self: flex-start;
+  align-items: flex-start;
+  
+}
+
+/* BUBBLES */
+.bubble {
+  padding: 11px 15px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  line-height: 1.65;
+ color: #0a0f2e;
+}
+
+.bubble.user {
+  background: #e8eaf6;
+  border: none;
+ 
+  border-bottom-right-radius: 0px;
+  padding: 1rem 1.5rem;
+    /* margin-bottom: 1.5rem; */
+    margin-top: 1.5rem;
+    
+}
+
+ 
+.bubble.ai {
+  background: transparent;
+  border: 1px solid #22222200;
+  /* border-left: 1.5px solid rgb(0, 60, 255); */
+  border-bottom-left-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.75rem;
+  padding-left: 10px;
+  border-bottom: 0;
+  padding-bottom: 5px;
+  padding-top: 0;
+ border-radius: 0;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ display: inline-block;
+ border-left: 1px solid rgb(0, 0, 0);
+}
+ 
+ 
+
+/* SOURCE PILLS */
+.sources-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+  padding: 0 0px;
+  margin-left: -6px;
+}
+
+.source-pill {
+  font-size: 0.6rem;
+  font-family: monospace;
+  color: #6876c2c2;
+  background: #eef0fb;
+  border: 1px solid #c8cef0ab;
+  border-radius: 4px;
+  padding: 2px 7px;
+  margin-left: 6px;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+/* TYPING */
+.typing {
+  color: #52586e;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* INPUT BAR */
+.input-bar {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  padding-top: 20px;
+  border: 1px solid #dde1ec;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 0px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+   border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #fefefe;
+}
+
+.input-bar textarea {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #dde1ec;
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #1c2033;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+  line-height: 1.5;
+  height: 3rem;
+  overflow-y: auto;
+  transition: border-color 0.2s;
+   
+}
+
+.input-bar textarea:focus {
+  box-shadow: 0px 0px 1px rgba(128, 128, 128, 0.531);
+}
+
+.input-bar textarea::placeholder {
+  color: #81869a;
+  font-style: italic;
+}
+
+.input-bar button {
+  background: #fefefe;
+  border: 1px solid #c5cae9;
+  border-radius: 10px;
+  color: #161b3e;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 15px 40px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.input-bar button:hover:not(:disabled) {
+  background: #f6f7fe;
+  color: #0b102f;
+}
+
+.input-bar button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+#typewriter-intro {
+    font-size: 1.25rem;
+}
+
+.down-arrow {
+    position: fixed;
+    bottom: 8rem;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,0);
+    background-color: #4a81ff42;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0px 0px 3px rgba(229, 229, 229, 0.338);
+    user-select: none;
+    cursor: pointer;
+    transition: 0.6s;
+    font-size: 1.3rem;
+    
+}
+
+.down-arrow:hover {
+    background-color: #2a64eb;
+}
+
+.copybtn {
+  background: rgba(228, 228, 228, 0.144);
+  padding: 1.5px 3px;
+  border: none;
+  outline: none;
+  display: block;
+  box-shadow: 0px ;
+  font-size: 1rem;
+  color: black;
+  cursor: pointer;
+  border-radius: 15%;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  padding: 5px;
+  padding-right: 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.bubble-row:hover>.copybtn {
+  opacity: 1;
+}
+
+.copybtn:focus{
+  transition: 0;
+}
+
+.copybtn>span{
+ 
+  font-size: 0.75rem;
+  font-weight: 300;
+  font-style: normal;
+  color: #000000ab;
+}
+.copybtn:hover {
+  border-radius: 10%;
+}
+.copybtn:hover>span {
+  display: inline;
+}
+
