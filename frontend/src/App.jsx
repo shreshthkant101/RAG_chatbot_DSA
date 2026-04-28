@@ -90,7 +90,7 @@ export default function App() {
     <div className="app">
       <div className="header">
         <span className="logo">Jarvis</span>
-        <span className="model-tag"> Trained on DSA · Shreshth Kant </span>
+        <span className="model-tag"> V1.0 · Specialised in DSA </span>
       </div>
       <ChatPanel messages={messages} loading={loading} />
       <InputBar onSend={sendMessage} loading={loading} />

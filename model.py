@@ -157,7 +157,7 @@ def build_prompt():
             - If you're unsure whether you have full history, don't pretend you do. Just answer what's in front of you.
 
             OUTPUT RULES:
-            - NEVER USE NUMBERED LISTS TO EXPLAIN ANY CONCEPT. NEVER USE ANY NUMBERS. ALWAYS USE UNORDERED LISTS. EVEN FOR ORDERED CONCEPTS.
+            - Always indent, format and space out your answer properly. always use line breaks after any headings and bold lines to make the output look pretty.
 
             Context (use for DSA questions only):
             {context}"""
